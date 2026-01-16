@@ -1,0 +1,703 @@
+/* --- Generales --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Tarjetas de Formulario y Resultados --- */
+.form-card,
+.results-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #34495e;
+    padding: 0 10px;
+}
+
+/* --- Formularios --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.fuse-group {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+}
+
+.add-table-container {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.fuse-table-selector {
+    margin-bottom: 15px;
+}
+
+.fuse-table-selector label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.fuse-columns-selector {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.fuse-columns-selector label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.columns-checkbox-group {
+    margin-bottom: 10px;
+}
+
+.columns-selected-count {
+    display: block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.loading-message {
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 10px;
+}
+
+.info-message {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 12px;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.additional-options-toggle {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-primary {
+    background-color: #2ecc71;
+}
+.btn-primary:hover {
+    background-color: #27ae60;
+}
+
+/* --- Header y Login --- */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    font-size: 14px;
+}
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+.login-container {
+    max-width: 450px;
+    margin-top: 50px;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+
+/* --- Tabla de Resultados --- */
+.table-container {
+    width: 100%;
+    max-height: 800px;
+    overflow-x: auto; /* Permite scroll horizontal en tablas grandes */
+    overflow-y: auto; /* Permite scroll vertical */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagination-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-options label {
+    font-weight: 600;
+    margin: 0;
+}
+
+.pagination-select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pagination-info {
+    font-weight: 600;
+    color: #34495e;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-pagination {
+    padding: 6px 15px;
+    font-size: 14px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pagination:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.btn-pagination:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap; /* Evita que el texto se parta */
+}
+
+thead th {
+    background-color: #34495e;
+    color: white;
+    position: sticky; /* Cabecera fija al hacer scroll vertical */
+    top: 0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* --- Estilos para 'Sí' y 'No' (Tu solicitud) --- */
+.cell-si {
+    background-color: #d4edda !important; /* Verde */
+    color: #155724;
+    font-weight: bold;
+}
+
+.cell-no {
+    background-color: #f8d7da !important; /* Rojo */
+    color: #721c24;
+}
+
+/* --- Estilos para el nuevo botón y cabecera de resultados --- */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.results-header h3 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.results-header-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-consolidate {
+    background-color: #9b59b6;
+    font-size: 14px;
+}
+
+.btn-consolidate:hover:not(:disabled) {
+    background-color: #8e44ad;
+}
+
+.btn-consolidate:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-map {
+    background-color: #16a085; /* Turquesa */
+    font-size: 14px;
+}
+.btn-map:hover {
+    background-color: #117a65;
+}
+
+
+/* --- Estilos del Mapa (Basados en tu HTML) --- */
+#map { 
+    height: 1000px; 
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.filters {
+    background: #f4f4f4; 
+    padding: 15px; 
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+.filters strong, .filters label {
+    display: block;
+    margin-bottom: 5px;
+}
+.filters select,
+#tipo-mapa-display {
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#filtro-criterios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
+    margin-top: 5px;
+}
+#filtro-criterios label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+#filtro-criterios input {
+    margin: 0;
+}
+#btn-actualizar, #btn-exportar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn-actualizar {
+    background-color: #007bff;
+    color: white;
+}
+#btn-actualizar:hover {
+    background-color: #0056b3;
+}
+#btn-exportar {
+    background-color: #28a745;
+    color: white;
+    margin-left: 10px;
+}
+#btn-exportar:hover {
+    background-color: #218838;
+}
+
+/* Estilos para los botones de control del mapa */
+.btn-map-control {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-map-control:hover {
+    background-color: #5a6268;
+}
+
+/* Sección de controles del mapa */
+.map-controls-section {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.map-controls-section strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.map-controls-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#table-container {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+/* Asegurar que la tabla del mapa también tenga cabeceras fijas */
+#table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#table-container th, #table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#table-container th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+}
+
+/* --- (NUEVO) Estilos para el Editor de Tabla --- */
+.edit-card {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfaeb; /* Un color de "aviso" suave */
+    border: 1px solid #f9e79f;
+}
+.edit-card strong {
+    font-size: 1.1em;
+    color: #b08f00;
+}
+.btn-edit {
+    background-color: #f39c12;
+    font-size: 14px;
+}
+.btn-edit:hover {
+    background-color: #d35400;
+}
+
+.table-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#status-message {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* --- (NUEVO) Estilos para el Modal de Autenticación --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Estilos para las etiquetas permanentes del mapa */
+.permanent-tooltip {
+    /* Letra más pequeña (ajustado de 0.75em a 0.65em) */
+    font-size: 0.70em; 
+    
+    /* Quitar la sombra grande */
+    box-shadow: none; 
+    
+    /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.7); 
+    
+    /* Sin borde sólido */
+    border: none;
+    
+    /* Hacemos el texto un poco transparente */
+    color: #000;
+    opacity: 0.8;
+    
+    /* Evita que el texto se "rompa" en varias líneas */
+    white-space: nowrap;
+}
+
+/* Esto asegura que los tooltips permanentes no intercepten eventos de ratón */
+/*.leaflet-tooltip.permanent-tooltip {
+    pointer-events: none;
+}
+*/
+/* Esto oculta el marcador 'ancla' pero mantiene el cursor de "mover" */
+/*.draggable-label-anchor {
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0;     /* Lo hace totalmente transparente */
+#map-container {
+    position: relative;
+    
+    /* Asegúrate de que el contenedor tenga el mismo tamaño que tu mapa */
+    /* por ejemplo: */
+    width: 100%;
+    height: 1000px; /* O el alto que estés usando para el mapa */
+}
+
+#map-legend {
+    position: absolute;
+    top: 80px;  /* Separado de la esquina */
+    left: 20px; /* Separado de la esquina */
+    z-index: 800; /* Encima del mapa, debajo de los controles */
+    
+    background: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    
+    /* Tamaño de letra fijo y control de scroll */
+    font-family: Arial, sans-serif;
+    font-size: 12px; /* Tamaño de letra definido */
+    max-height: 890px; /* Altura máxima antes de mostrar scroll */
+    max-width: 350px;  /* Ancho máximo */
+    overflow-y: auto;  /* Scroll vertical si es necesario */
+}
+
+/* Estilo para la lista dentro de la leyenda */
+#map-legend ol {
+    list-style-type: decimal; /* Numera la lista */
+    padding-left: 20px; /* Espacio para los números */
+    margin: 0;
+}
+
+#map-legend li {
+    margin-bottom: 8px; /* Espacio entre cada estado */
+}
+
+
+/*
+ * ESTILOS PARA LOS IDENTIFICADORES NUMÉRICOS EN EL MAPA
+ */
+.map-identifier-label {
+    /* Quitar el fondo y borde de tooltip de Leaflet */
+    background: none;
+    border: none;
+    box-shadow: none;
+    
+    /* Estilo del texto (negro con sombra blanca para legibilidad) */
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 3px #FFFFFF; /* Sombra blanca */
+
+    /* ¡IMPORTANTE! Permite que los clics "atraviesen" la etiqueta */
+    pointer-events: none; 
+}
+
+.leaflet-tooltip.map-identifier-label {
+    /* Quita el fondo blanco */
+    background: rgba(255, 255, 255, 0.2); 
+    
+    
+    /* Quita el borde */
+    border: none;
+    
+    /* Quita la sombra de la caja */
+    box-shadow: none;
+    
+    /* Estilo del texto (negro con sombra blanca para legibilidad) */
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 
+        0 0 3px #FFFFFF,
+        0 0 3px #FFFFFF,
+        0 0 3px #FFFFFF; /* Sombra blanca para que resalte */
+
+    /* Permite que los clics "atraviesen" la etiqueta */
+    pointer-events: none; 
+}
+
+/* Esto hace que los clics "atraviesen" las etiquetas permanentes */
+.map-identifier-label {
+    /* ... (tus otros estilos para el número) ... */
+    pointer-events: none; 
+}
+
+/* Estilos para tooltips permanentes de popups */
+.leaflet-tooltip.permanent-popup-tooltip {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid #3388ff;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 13px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 700;
+}
+
+.leaflet-tooltip-top.permanent-popup-tooltip {
+    margin-top: -10px;
+}
+
+.leaflet-tooltip-top.permanent-popup-tooltip::before {
+    border-top-color: #3388ff;
+}
